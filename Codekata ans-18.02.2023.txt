@@ -1,0 +1,197 @@
+//Multiples of 9
+
+const readline = require('readline');
+const inp = readline.createInterface({
+  input: process.stdin
+});
+const userInput = [];
+inp.on("line", (data) => {
+ userInput.push(data);
+});
+inp.on("close", () => {
+var num = userInput[0];
+var multplesOf9 = [];
+
+for(var i = 1; i <= num; i++){
+    var result = i * 9;
+    multplesOf9.push(result);
+}
+
+if(num === 0){
+    console.log('NULL');
+}else{
+    console.log(multplesOf9.join(' '));
+}
+
+});
+
+
+
+//Circumference
+
+const readline = require('readline');
+const inp = readline.createInterface({
+  input: process.stdin
+});
+const userInput = [];
+inp.on("line", (data) => {
+ userInput.push(data);
+});
+inp.on("close", () => {
+var data = userInput[0];
+const circumference = 2 * (22/7) * data;
+
+console.log(circumference.toFixed(2));
+});
+
+
+
+//Days in a month
+
+const readline = require('readline');
+const inp = readline.createInterface({
+  input: process.stdin
+});
+const userInput = [];
+inp.on("line", (data) => {
+ userInput.push(data);
+});
+inp.on("close", () => {
+const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31,30, 31, 30, 31];
+var data = userInput[0];
+
+if(data <= 12 && data > 0){
+    var days = daysInMonth.find((value, index) => index === data - 1);
+    console.log(days);
+}else{
+    console.log('Error');
+}
+});
+
+
+//Odd or Even
+
+const readline = require('readline');
+const inp = readline.createInterface({
+  input: process.stdin
+});
+const userInput = [];
+inp.on("line", (data) => {
+ userInput.push(data);
+});
+inp.on("close", () => {
+var data = Math.round(userInput[0]);
+if(data === 0){
+    console.log('Zero');
+}else if(data % 2 === 0){
+    console.log('Even');
+}else{
+    console.log('Odd');
+}
+
+});
+
+
+//Factorial
+const readline = require('readline');
+const inp = readline.createInterface({ input: process.stdin });
+ const userInput = []; 
+ inp.on("line", (data) => { userInput.push(data); }); 
+ inp.on("close", () => { 
+      var num = userInput[0]; 
+      var fact = 1;
+  for (i = 1; i <= num; i++) { 
+      fact = fact* i;
+ }
+ 
+ console.log(fact)
+ });
+
+
+//Quadratic Equation
+
+const readline = require('readline');
+const inp = readline.createInterface({
+  input: process.stdin
+});
+const userInput = [];
+inp.on("line", (data) => {
+ userInput.push(data);
+});
+inp.on("close", () => {
+var num = userInput[0].split(' ');
+var a = num[0];
+var b = num[1];
+var c = num[2];
+var X = (-b + Math.sqrt((b*b) - (4*a*c)))/(2*a);
+var Y = (-b - Math.sqrt((b*b) - (4*a*c)))/(2*a);
+
+console.log(parseFloat(X).toFixed(2));
+console.log(parseFloat(Y).toFixed(2));
+});
+
+
+
+
+//Sum of digits
+
+const readline = require('readline');
+const inp = readline.createInterface({
+  input: process.stdin
+});
+const userInput = [];
+inp.on("line", (data) => {
+ userInput.push(data);
+});
+inp.on("close", () => {
+var data = userInput[0].split("");
+var sum = 0;
+for (var i=0; i< data.length; i++){
+    sum = sum + parseInt(data[i]);
+}
+console.log(sum)
+});
+
+//Separate Even and Odd numbers
+
+const readline = require('readline');
+const inp = readline.createInterface({
+  input: process.stdin
+});
+const userInput = [];
+inp.on("line", (data) => {
+ userInput.push(data);
+});
+inp.on("close", () => {
+var data = userInput[0].split("");
+var odd = [];
+var even = [];
+
+for(var i = 0; i< data.length; i++){
+    if(data[i] % 2 === 0){
+        even.push(data[i]);
+    }else{
+        odd.push(data[i]);
+    }
+}
+ 
+console.log(even.sort().join(' '));
+console.log(odd.sort().join(' '));
+});
+
+//Cube of Number
+
+const readline = require('readline');
+const inp = readline.createInterface({
+  input: process.stdin
+});
+const userInput = [];
+inp.on("line", (data) => {
+ userInput.push(data);
+});
+inp.on("close", () => {
+var data = parseInt(userInput[0]);
+
+console.log(data*data*data)
+});
+
